@@ -11,7 +11,7 @@
     "coverage": "jest --coverage",
     "start-dev": "nodemon index.js",
     "build": "yarn test && yarn coverage",
-    "post-build": "rm -rf ./coverage",
+    "post-build": "rm -rf ./coverage"
   },
   "devDependencies": {
     "@uirouter/angularjs": "^1.0.15",
