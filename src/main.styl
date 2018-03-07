@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700')
+
+body, html
+  margin 0
+  padding 0
+  width 100%
+  height 100%
+  display flex
+  align-items center
+  flex-direction column
+  background-color #f1f1f1
+  font-family "Roboto", sans-serif
+
+  h1, h2, h3, h4, h5, h6, h7, input
+    color #212121
+
+    &:invalid
+      border 0
+
+  header, footer, #main
+    flex-grow 0
+    width 494px
+    display flex
+    flex-shrink 0
+    max-width 100%
+    flex-basis auto
+    box-sizing border-box
+
+  header
+    height 75px
+    align-items center
+
+    h1
+      margin 0
+      font-size 40px
+
+  footer
+    height 125px
+
+  #main, ui-view
+    display flex
+
+  #main
+    padding-top 25px
+    padding-bottom 25px
+
+  .svg-icon
+    display flex
+
+    &.small
+      width 24px
+      height 24px
+
+    svg
+      width 100%
+      height 100%
+
+    &.action
+      cursor pointer
+
+    &.delete-icon svg
+      fill #F44336

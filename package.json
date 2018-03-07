@@ -1,0 +1,82 @@
+{
+  "name": "angularjs-jest-webpack",
+  "version": "0.0.1",
+  "description": "AngularJS Testing with Jest",
+  "main": "index.js",
+  "author": "Carlos de Dios<c.dedios@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "jest",
+    "start": "node index.js",
+    "coverage": "jest --coverage",
+    "start-dev": "nodemon index.js"
+  },
+  "devDependencies": {
+    "@uirouter/angularjs": "^1.0.15",
+    "angular": "^1.6.9",
+    "angular-mocks": "^1.6.9",
+    "angular-resource": "^1.6.9",
+    "angular-storage": "^0.0.15",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-jest": "^22.2.2",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "bluebird": "^3.5.1",
+    "css-loader": "^0.28.9",
+    "eslint": "^4.17.0",
+    "eslint-loader": "^1.9.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "happypack": "^4.0.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^2.30.1",
+    "jest": "^22.3.0",
+    "jquery": "^3.3.1",
+    "moment": "^2.20.1",
+    "ng-annotate": "^1.2.2",
+    "ng-annotate-loader": "^0.6.1",
+    "ng-resource": "^1.3.2",
+    "ramda": "^0.25.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "svg-inline-loader": "^0.8.0",
+    "webpack": "^3.11.0",
+    "webpack-dev-middleware": "^2.0.5",
+    "webpack-hot-middleware": "^2.21.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongodb": "^3.0.2",
+    "mongoose": "^5.0.5",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  },
+  "jest": {
+    "roots": [
+      "./__test__"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "moduleDirectories": [
+      "src",
+      "node_modules"
+    ],
+    "moduleNameMapper": {
+      "^models$": "<rootDir>/src/app/models",
+      "\\.(html)$": "<rootDir>/__utils__/htmlLoader.js",
+      "\\.(css|styl|svg)$": "<rootDir>/__utils__/styleMock.js"
+    },
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/vendor.js",
+      "!src/**/config.js",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/path/to/dir/"
+    ],
+    "setupTestFrameworkScriptFile": "./jest.init.js"
+  }
+}

@@ -1,0 +1,10 @@
+<div class="todo-container">
+  <create-todo-item
+    on-create-request="::todoList.addTodo($todo)"></create-todo-item>
+
+  <todo-item
+    todo="todo"
+    on-remove-request="::todoList.removeTodo($todo)"
+    on-change-request="::todoList.updateTodo(todo.id, $todo)"
+    data-ng-repeat="todo in todoList.todos track by todo.id"></todo-item>
+</div>
