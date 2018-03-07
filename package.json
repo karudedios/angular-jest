@@ -10,7 +10,8 @@
     "start": "node index.js",
     "coverage": "jest --coverage",
     "start-dev": "nodemon index.js",
-    "build": "yarn test && yarn coverage"
+    "build": "yarn test && yarn coverage",
+    "post-build": "rm -rf ./coverage",
   },
   "devDependencies": {
     "@uirouter/angularjs": "^1.0.15",
@@ -26,6 +27,7 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "bluebird": "^3.5.1",
+    "coveralls": "^3.0.0",
     "css-loader": "^0.28.9",
     "eslint": "^4.17.0",
     "eslint-loader": "^1.9.0",

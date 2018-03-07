@@ -8,3 +8,7 @@ script:
 branches:
   only:
     - master
+
+after_script:
+  - cat ./coverage/lcov.info | yarn coveralls
+  - npm run post-build
