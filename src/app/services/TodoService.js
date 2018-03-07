@@ -2,7 +2,13 @@ import * as R from 'ramda';
 import { Todo } from 'models';
 import Promise from 'bluebird';
 
-const todos = [];
+const todos = [
+  Todo.new("Learn Jest", true),
+  Todo.new("Learn React", true),
+  Todo.new("Learn AngularJS", true),
+  Todo.new("Take over the world!", false),
+  Todo.new("Figure out how much wood I'd chuck as a woodchuck", false),
+];
 
 export default class TodoService {
   all = () => {

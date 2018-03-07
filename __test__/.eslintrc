@@ -1,6 +1,6 @@
 {
-  "globals": [
-    "inject",
-    "angular"
-  ]
+  "globals": {
+    "inject": 1,
+    "angular": 1
+  }
 }

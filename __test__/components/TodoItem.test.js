@@ -3,6 +3,7 @@ import createControllerFactory from '../../__utils__/createControllerFactory';
 
 describe('TodoItem', function() {
 
+  let createElement;
   let createController;
 
   beforeEach(() => {
@@ -11,9 +12,10 @@ describe('TodoItem', function() {
 
   });
 
-  beforeEach(inject(createControllerFactory('todoItem', creator => {
+  beforeEach(inject(createControllerFactory('todoItem', (controllerCreator, elementCreator) => {
 
-    createController = creator;
+    createElement = elementCreator;
+    createController = controllerCreator;
 
   })));
 
@@ -55,6 +57,45 @@ describe('TodoItem', function() {
     controller.removeTodo();
 
     expect(controller.onRemoveRequest).toBeCalledWith({ $todo: controller.todo });
+
+  });
+
+  describe("Snapshot Testing", function() {
+
+    it('should render the element when no todo is provided', function() {
+
+      const element = createElement('todoItem');
+
+      expect(element).toBeDefined();
+      expect(element[0]).toMatchSnapshot();
+
+    });
+
+    it('should render the element when todo is provided with id', function() {
+
+      const element = createElement('todoItem', {
+        todo: {
+          id: 5
+        }
+      });
+
+      expect(element).toBeDefined();
+      expect(element[0]).toMatchSnapshot();
+
+    });
+
+    it('should render the element when todo is provided with a title', function() {
+
+      const element = createElement('todoItem', {
+        todo: {
+          title: "Hello!"
+        }
+      });
+
+      expect(element).toBeDefined();
+      expect(element[0]).toMatchSnapshot();
+
+    });
 
   });
 
