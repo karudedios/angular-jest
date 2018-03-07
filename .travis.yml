@@ -1,0 +1,10 @@
+install:
+  - npm install -g npm @5.7.1
+  - npm ci
+
+script:
+  - yarn build
+
+branches:
+  only:
+    - master

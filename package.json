@@ -6,10 +6,11 @@
   "author": "Carlos de Dios<c.dedios@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "jest",
+    "test": "jest",
     "start": "node index.js",
     "coverage": "jest --coverage",
-    "start-dev": "nodemon index.js"
+    "start-dev": "nodemon index.js",
+    "build": "yarn test && yarn coverage"
   },
   "devDependencies": {
     "@uirouter/angularjs": "^1.0.15",
