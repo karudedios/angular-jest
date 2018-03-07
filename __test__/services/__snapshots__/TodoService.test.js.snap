@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoService should allow you to delete existing todos 1`] = `Array []`;
+
+exports[`TodoService should allow you to update an existing todo 1`] = `
+Object {
+  "completed": false,
+  "id": 8,
+  "title": "Hello 2",
+}
+`;
+
+exports[`TodoService should return a new instance of a Todo object on \`new\` call 1`] = `
+Todo {
+  "completed": false,
+  "id": 6,
+  "title": "Hello",
+}
+`;
+
+exports[`TodoService should store a new todo on the "datasource" collection 1`] = `
+Todo {
+  "completed": false,
+  "id": 7,
+  "title": "Hello",
+}
+`;
+
+exports[`TodoService should throw an error if todo id does not exist when trying to delete 1`] = `[Error: Todo not found]`;
+
+exports[`TodoService should throw an error if todo id does not exist when trying to update 1`] = `[Error: Todo not found]`;

@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoItem Snapshot Testing should render the element when no todo is provided 1`] = `
+<todo-item
+  class="ng-scope ng-isolate-scope"
+>
+  
+    
+  <div
+    class="todo"
+  >
+    
+      
+    <input
+      data-ng-checked="todoItem.todo.completed"
+      id="check-"
+      type="checkbox"
+    />
+    
+
+      
+    <label
+      class="todo-title"
+      data-ng-click="::todoItem.toggleTodo()"
+    >
+      
+        
+      <h4
+        class="ng-binding"
+        data-ng-bind="::todoItem.todo.title"
+      />
+      
+      
+    </label>
+    
+
+      
+    <span
+      class="svg-icon delete-icon action small"
+      data-ng-click="::todoItem.removeTodo()"
+    >
+      
+        svg-icon
+      
+    </span>
+    
+    
+  </div>
+  
+  
+</todo-item>
+`;
+
+exports[`TodoItem Snapshot Testing should render the element when todo is provided with a title 1`] = `
+<todo-item
+  class="ng-scope ng-isolate-scope"
+  todo="todo"
+>
+  
+    
+  <div
+    class="todo"
+  >
+    
+      
+    <input
+      data-ng-checked="todoItem.todo.completed"
+      id="check-"
+      type="checkbox"
+    />
+    
+
+      
+    <label
+      class="todo-title"
+      data-ng-click="::todoItem.toggleTodo()"
+    >
+      
+        
+      <h4
+        class="ng-binding"
+        data-ng-bind="::todoItem.todo.title"
+      >
+        Hello!
+      </h4>
+      
+      
+    </label>
+    
+
+      
+    <span
+      class="svg-icon delete-icon action small"
+      data-ng-click="::todoItem.removeTodo()"
+    >
+      
+        svg-icon
+      
+    </span>
+    
+    
+  </div>
+  
+  
+</todo-item>
+`;
+
+exports[`TodoItem Snapshot Testing should render the element when todo is provided with id 1`] = `
+<todo-item
+  class="ng-scope ng-isolate-scope"
+  todo="todo"
+>
+  
+    
+  <div
+    class="todo"
+  >
+    
+      
+    <input
+      data-ng-checked="todoItem.todo.completed"
+      id="check-5"
+      type="checkbox"
+    />
+    
+
+      
+    <label
+      class="todo-title"
+      data-ng-click="::todoItem.toggleTodo()"
+    >
+      
+        
+      <h4
+        class="ng-binding"
+        data-ng-bind="::todoItem.todo.title"
+      />
+      
+      
+    </label>
+    
+
+      
+    <span
+      class="svg-icon delete-icon action small"
+      data-ng-click="::todoItem.removeTodo()"
+    >
+      
+        svg-icon
+      
+    </span>
+    
+    
+  </div>
+  
+  
+</todo-item>
+`;

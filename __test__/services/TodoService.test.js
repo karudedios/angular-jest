@@ -31,6 +31,8 @@ describe("TodoService", function() {
     expect(todo.completed).toEqual(false);
     expect(todo.title).toEqual(data.title);
 
+    expect(todo).toMatchSnapshot();
+
   });
 
   it('should store a new todo on the "datasource" collection', async function() {
@@ -42,6 +44,8 @@ describe("TodoService", function() {
 
     expect(todos.length).toEqual(1);
     expect(R.last(todos)).toEqual(todo);
+
+    expect(todo).toMatchSnapshot();
 
   });
 
@@ -56,6 +60,8 @@ describe("TodoService", function() {
     expect(updatedTodo.id).toEqual(todo.id);
     expect(updatedTodo.title).toEqual('Hello 2');
     expect(updatedTodo.completed).toEqual(todo.completed);
+
+    expect(updatedTodo).toMatchSnapshot();
 
   });
 
@@ -72,6 +78,8 @@ describe("TodoService", function() {
     expect(deleted).toEqual(true);
     expect(allTodos.length).toEqual(0);
 
+    expect(allTodos).toMatchSnapshot();
+
   });
 
   it('should throw an error if todo id does not exist when trying to update', async function() {
@@ -83,6 +91,8 @@ describe("TodoService", function() {
     } catch(e) {
 
       expect(e.message).toEqual('Todo not found');
+
+      expect(e).toMatchSnapshot();
 
     }
 
@@ -97,6 +107,8 @@ describe("TodoService", function() {
     } catch(e) {
 
       expect(e.message).toEqual('Todo not found');
+
+      expect(e).toMatchSnapshot();
 
     }
 
